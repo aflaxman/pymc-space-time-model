@@ -135,7 +135,7 @@ def write(data, out_fname):
 
 def countries_by_region():
     """ form dictionary of countries, keyed by gbd region"""
-    c4 = dict([[d[0], d[1:]] for d in csv.reader(open('../country_region.csv'))])
+    c4 = dict([[d[0], d[1:]] for d in csv.reader(open('country_region.csv'))])
     c4.pop('World')
 
     [c4.pop(k) for k in sorted(c4.keys())[regions:]]  # keep only specified number of regions
