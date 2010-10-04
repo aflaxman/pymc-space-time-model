@@ -67,7 +67,7 @@ def gp_re_a(data):
 
         C[i] ~ Matern(2, sigma_f[i], tau_f[i])
 
-        e_r,c,t,a ~ N(0, (gamma * W_r,c,t,a)**2 + sigma_e**2)
+        e_r,c,t,a ~ N(0, (gamma * W_r,c,t,a)^2 + sigma_e^2 + sigma_r,c,t,a^2)
     """
     # covariates
     K1 = count_covariates(data, 'x')
